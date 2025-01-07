@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Key Listener</title>
-</head>
-<body>
-    <script>
-        // Listen for keydown events
-        window.addEventListener("keydown", function(event) {
-            // Send the key code back to MIT App Inventor
-            AppInventor.setWebViewString(event.keyCode.toString());
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Scroll Event</title>
+    <script type="text/javascript">
+        // Detect mouse wheel scroll event
+        window.addEventListener("wheel", function(event) {
+            // Check if the scroll is up or down
+            if (event.deltaY < 0) {
+                // Scroll up
+                AppInventor.setWebViewString("scroll_up");
+            } else {
+                // Scroll down
+                AppInventor.setWebViewString("scroll_down");
+            }
         });
     </script>
+</head>
+<body>
+    <h1>Use the Mouse Scroll Wheel</h1>
 </body>
 </html>
