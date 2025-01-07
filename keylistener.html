@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Key Listener</title>
+</head>
+<body>
+    <script>
+        // Listen for keydown events
+        window.addEventListener("keydown", function(event) {
+            // Send the key code back to MIT App Inventor
+            AppInventor.setWebViewString(event.keyCode.toString());
+        });
+    </script>
+</body>
+</html>
